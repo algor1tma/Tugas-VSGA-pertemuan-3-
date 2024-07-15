@@ -3,62 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Group with Bootstrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Grid Layout with Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa; /* Background color for the page */
-            padding: 20px; /* Padding around the content */
+        .header {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            grid-template-columns: auto;
+            margin-bottom: 10px;
+        } 
+        .content {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 160px;
+            margin-right: 20px;
+        } 
+        .sidebar {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 80px;
+            margin-top: 10px;
+        } 
+        .footer {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 10px;
         }
-        .container {
-            background-color: #ffffff; /* Background color for the form container */
-            padding: 20px; /* Padding inside the form container */
-            border-radius: 8px; /* Rounded corners for the form container */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Box shadow for a subtle depth */
-            max-width: 500px; /* Maximum width of the form */
-            margin: auto; /* Center the form horizontally */
-        }
-        h2 {
-            text-align: center; /* Center-align the heading */
-            margin-bottom: 20px; /* Bottom margin for the heading */
-        }
-        .form-label {
-            font-weight: bold; /* Bold font weight for labels */
-        }
-        .form-control {
-            margin-bottom: 15px; /* Bottom margin for form controls */
-        }
-        .btn-primary {
-            width: 100%; /* Full width button */
+
+        .header, .footer {
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2>Selamat datang</h2>
-        <form>
-            <div class="mb-3">
-                <label for="nama" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 header">
+                Ini header
             </div>
-            <div class="mb-3">
-                <label for="alamat" class="form-label">Alamat</label>
-                <input type="text" class="form-control" id="alamat" placeholder="Masukkan Alamat" required>
+        </div>
+        <div class="row">
+            <div class="col-md-8 content">
+                Ini konten
             </div>
-            <div class="mb-3">
-                <label for="jenisKelamin" class="form-label">Jenis Kelamin</label>
-                <select class="form-select" id="jenisKelamin" required>
-                    <option selected disabled>Pilih Jenis Kelamin</option>
-                    <option value="pria">Pria</option>
-                    <option value="wanita">Wanita</option>
-                </select>
+            <div class="col-md-4 sidebar">
+                Ini sidebar
             </div>
-            <button type="submit" class="btn btn-primary">Simpan</button>
-        </form>
+        </div>
+        <div class="row">
+            <div class="col-12 footer">
+                Ini footer
+            </div>
+        </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
